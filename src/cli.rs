@@ -27,11 +27,11 @@ pub struct Args {
     pub network: NetID,
 
     #[clap(long, display_order(3))]
-    /// IP of full node on specified `network`; Required when not collecting to "mainnet" or "testnet"
+    /// Address of full node on specified `network`. Required when using networks other than "mainnet" and "testnet"
     pub connect: Option<SocketAddr>,
 
     #[clap(long, default_value = "127.0.0.1:11773", display_order(4))]
-    /// IP to host melwalletd server
+    /// melwalletd server address
     pub listen: SocketAddr,
 
     #[clap(long, short, default_value = "*", display_order(998))]
